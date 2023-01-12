@@ -38,7 +38,7 @@ jobs:
         run: dotnet tool install -g dotnet-ef
 
       - name: dotnet bundle migration
-        run: dotnet ef migrations bundle -p DotNetCoreSqlDb/DotNetCoreSqlDb.csproj -o ${{env.DOTNET_ROOT}}/myapp/migrat
+        run: dotnet ef migrations bundle -p DotNetCoreSqlDb/DotNetCoreSqlDb.csproj -o ${{env.DOTNET_ROOT}}/myapp/migrate
 
   deploy:
     runs-on: ubuntu-latest
